@@ -1,6 +1,6 @@
 pkgname=hwdata
 pkgver=0.398
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="Hardware identification and configuration data"
 url="https://github.com/vcrhonek/hwdata"
 arch="noarch"
@@ -63,6 +63,7 @@ pnp() {
     amove usr/share/hwdata/pnp.ids
 }
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 ede23b1acf25444ed859d296ebd29cf630da3b07203ec49e536fda0726c3af04afcdcd4a45b142931036e9650780c29011e0c7e2f0fb23a8fdb9b48bcd2e0caa  hwdata-0.398.tar.gz
 "
